@@ -1,0 +1,442 @@
+/* 
+Theme Name: Baseus
+*/
+
+:root {
+  --text-dark: #000000;
+  --text-light: #C1C1C1;
+  --text-accent: #FFF000;
+  --bg-dark: #2e2e2e;
+  --bg-light: #ffffff;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url('./assets/fonts/GothamProBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url('./assets/fonts/GothamProBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url('./assets/fonts/GothamProMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url('./assets/fonts/GothamProRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    text-decoration: none;
+    color: #000000;
+}
+
+body {
+    color: var(--text-dark);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-12 {
+  width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'GothamPro';
+    font-weight: 900;
+    font-size: 36px;
+}
+
+h2 {
+    font-family: 'GothamPro';
+    font-weight: 700;
+}
+
+h3 {
+    font-family: 'GothamPro';
+    font-weight: 400;
+}
+
+p {
+    font-family: 'GothamPro';
+    font-weight: 500;
+}
+
+/* МЕНЮ */
+.menu {
+  padding: 60px 0;
+  background-color: var(--bg-dark);
+}
+
+.menu-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu .logo{
+  width: fit-content;
+}
+
+.menu .logo h1{
+  position: relative;
+}
+
+.menu h1, .menu h3 {
+  color: var(--bg-light);
+}
+
+.menu .logo h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  height: 1.5px;
+  width: 110%;
+  background-color: #FFF000;
+}
+
+.menu .right {
+  width: 60.5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu .search {
+    position: relative;
+    width: 79.5%;
+}
+
+.menu .search img {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.menu input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-family: 'GothamPro';
+  font-weight: 500;
+  color: var(--text-dark);
+  padding-left: 16px;
+}
+
+.menu input::placeholder {
+  font-family: 'GothamPro';
+  font-weight: 400;
+  color: var(--text-light);    
+  font-size: 18px;     
+}
+
+.menu .icons {
+  position: relative;
+  min-width: 75px;
+  padding-left: 6.66%;
+}
+
+.menu .icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+
+.contact {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+/* ХЕДЕР */
+.header {
+  background-color: var(--bg-dark);
+  padding-bottom: 160px;
+}
+
+.header-inner {
+  height: 457px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .categories {
+  width: 32%;
+  height: 100%;
+  align-content: space-between; 
+}
+
+.header .category {
+  width: 180px;
+  height: 134px;
+  background-color: var(--bg-light);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+.category:hover {
+  opacity: 0.5;
+}
+
+.category img{
+  filter: invert(1);
+}
+
+.header .promotions {
+  width: 65%;
+  height: 100%;
+}
+
+.header .promo {
+  max-width: 80%;
+  padding: 0 10%;
+}
+
+.header .promo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-wrapper {
+  position: relative;
+  overflow: hidden;
+  --swiper-navigation-size: 44px;
+  --swiper-navigation-sides-offset: 0px; 
+  --swiper-navigation-color: var(--bg-light);
+}
+
+.header .promo .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header .promotions .card-wrapper {
+  width: 100%;
+}
+
+.promo .text .title{
+  width: 240px;
+  font-size: 24px;
+  color: var(--bg-light);
+  line-height: 124%;
+}
+
+.header .non-promo-price {
+  padding: 0 0 7px 10px;
+  width: fit-content;
+  position: relative;
+  font-size: 27px;
+  color: var(--bg-light);
+}
+
+.header .non-promo-price::after,
+.header .promo-price::after {
+  content: " грн";
+}
+
+.header .non-promo-price::before {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 0%;
+  height: 2.25px;
+  width: 110%;
+  background-color: #FFF000;
+  transform: rotate(10deg);
+}
+
+.header .promo-price {
+  font-size: 36px;
+  color: var(--text-accent);
+}
+
+.header .buttons .buy, 
+.header .buttons .catalog {
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    width: 200px;
+    height: 60px;
+    background-color: var(--text-accent);
+    border-radius: 5px;
+    font-family: 'GothamPro';
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-dark);
+    transition: opacity 0.5s ease;
+}
+
+.header .buttons .catalog {
+    margin: 19px 0 5px 0;
+    background-color: var(--bg-light);
+}
+
+.header .buttons .buy:hover, 
+.header .buttons .catalog:hover {
+  opacity: 0.5;
+}
+
+/* ХІТИ ПРОДАЖІВ */
+.top-sales .container > h2 {
+  margin: 60px 0;
+  font-size: 36px;
+}
+
+
+/* КАРТКА ТОВАРУ */
+.product {
+  position: relative;
+  width: 285px;
+  height: 480px;
+}
+
+.product .image {
+  position: relative;
+  height: 73.7%;
+}
+
+.product .image-reserve {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.product .image-main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.product:hover .image-reserve {
+  opacity: 1;
+}
+
+.product:hover .image-main {
+  opacity: 0;
+}
+
+.product .info {
+  height: 23.3%;
+  margin-top: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.product .info p {
+  font-size: 18px;
+  width: 200px;
+}
+
+.product .rating {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product .rating img {
+  margin-top: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+.product .info h2 {
+  font-size: 21.5px;
+  width: fit-content;
+  color: #ff0000;
+}
+
+.product .info .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.product .info .non-promo-price {
+  padding-bottom: 5px;
+  width: fit-content;
+  position: relative;
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+.product .info .non-promo-price:not(:empty)::after,
+.product .info .promo-price::after {
+  content: " грн";
+}
+
+.product .info .non-promo-price:not(:empty)::before {
+  content: "";
+  position: absolute;
+  bottom: 55%;
+  left: 0%;
+  height: 1.35px;
+  width: 110%;
+  background-color: var(--text-light);
+}
+
+.product .info .promo-price {
+  font-size: 21.5px;
+  color: #ff0000;
+}
+
+.product .info > img {
+  width: 52px;
+  height: 52px;
+}

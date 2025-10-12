@@ -49,9 +49,12 @@ body {
 }
 
 .container {
+  position: relative;;
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .row {
@@ -106,7 +109,7 @@ p {
     font-weight: 500;
 }
 
-
+/* ГОЛОВНА СТОРІНКА */
 /* ЛОГОТИП */
 .logo{
   width: fit-content;
@@ -488,8 +491,6 @@ p {
   color: #000; 
 }
 
-
-
 /* ФУТЕР */
 .footer {
   margin-top: 60px;
@@ -709,38 +710,475 @@ p {
   width: 25%;
 }
 
-  /* ФУТЕР */
-  .footer {
-    margin-top: 40px;
-    padding-bottom: 30px;
+/* ФУТЕР */
+.footer {
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+
+.footer .row {
+  padding: 30px 0;
+}
+
+.footer .info,
+.footer .footer-menu {
+  width: 100%;
+}
+
+.footer .info {
+  margin-bottom: 20px;
+}
+
+.footer .info .contacts {
+  padding-right: 0;
+}
+
+.footer .footer-menu .info-first {
+  padding-left: 0;
+}
+
+.footer a, .footer p {
+  font-size: 12px;
+}
+
+.footer .adress {
+  margin-top: 10px;
+}
+}
+
+/* СТОРІНКА КАТАЛОГ ТОВАРІВ */
+/* КАТЕГОРІЇ */
+.categories {
+  background-color: #2e2e2e;
+  padding-bottom: 111px;
+}
+
+.catalog-categories-swiper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  --swiper-navigation-size: 35px;
+  --swiper-navigation-color: var(--bg-light);
+}
+
+.categories .swiper-wrapper {
+  width: 90%;
+  height: auto;
+  padding: 0 5%;
+}
+
+.categories .category {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+  background-color: var(--bg-light);
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
+}
+
+.categories .category a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.categories .category img {
+  width: 42%;
+  height: auto;
+}
+
+.categories .category h2{
+  font-size: 1.05vw;
+}
+
+.after-six {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #2e2e2e 82%, transparent 100%);
+  pointer-events: none;
+}
+
+.after-six a img,
+.after-six a h2 {
+  display: none;
+}
+
+.swiper-slide-prev {
+  background-color: #2e2e2e !important;
+
+}
+
+.swiper-slide-prev a img,
+.swiper-slide-prev a h2 {
+  display: none;
+}
+
+/* АДАПТИВНА ВЕРСІЯ */
+@media (max-width: 575px) { 
+
+.categories {
+  padding: 20px 0;
+}
+
+.categories .swiper-wrapper {
+  width: 100%;
+  padding: 0;
+}
+
+.categories .category h2{
+  font-size: 2.5vw;
+}
+
+.after-six {
+  display: none !important;
+}
+
+.after-six a img,
+.after-six a h2 {
+  display: block;
+}
+
+.swiper-slide-prev {
+  background-color: var(--bg-light) !important;
+}
+
+.swiper-slide-prev a img,
+.swiper-slide-prev a h2 {
+  display: block;
+}
+}
+
+/* СІТКА ТОВАРІВ */
+
+.grid-products li {
+  width: 24%;
+  padding-bottom: 2%;
+}
+
+.grid-products .cat-name-sort-filter {
+  position: relative;
+  padding: 30px 0;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-products .container {
+  overflow: visible;
+}
+
+.grid-products .cat-name {
+  font-size: 32px;
+}
+
+.grid-products .sort-filter p {
+  padding-left: 12px;
+  font-size: 16.8px;
+}
+
+.grid-products .cat-name-sort-filter::after{
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: -2.5%;
+  height: 1.35px;
+  width: 105%;
+  background-color: var(--text-light);
+}
+
+.grid-products .sort-filter {
+  position: relative;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-products .sort-btn, 
+.grid-products .filter-btn {
+  padding: 0 5px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease; 
+}
+
+.grid-products .sort-btn:hover, 
+.grid-products .filter-btn:hover {
+  cursor: pointer;
+  border: 1px solid var(--text-light);
+  border-radius: 5px;
+}
+
+/* СОРТУВАННЯ */
+  .sort-filter .sort {
+    position: absolute;
+    opacity: 0;
+    top: 37px;
+    width: 59,5%;
+    aspect-ratio: 5.6 / 3.1;
+    height: auto;
+    background-color: var(--bg-light);
+    overflow-y: auto;
+    transition: opacity 0.5s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
   }
 
-  .footer .row {
-    padding: 30px 0;
+  .sort-filter .sort.show {
+    opacity: 1;
   }
 
-  .footer .info,
-  .footer .footer-menu {
-    width: 100%;
+.option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  font-family: 'GothamPro';
+  font-weight: 400;
+  font-size: 16.8px;
+  padding: 7.5px 22px 7.5px 50px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.option:hover {
+  background: #f2f2f2;
+}
+
+.option::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background: url("assets/images/галочка.png") no-repeat center center;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.option.active::before {
+  opacity: 1;
+}
+
+/* ФІЛЬТРУВАННЯ */
+
+  .grid-products {
+    overflow: hidden;
   }
 
-  .footer .info {
-    margin-bottom: 20px;
+  .grid-products .filter {
+    position: fixed;
+    right: -100%;
+    top: 37px;
+    width: fit-content;
+    height: auto;
+    background-color: var(--bg-light);
+    overflow-y: auto;
+    transition: opacity 0.5s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+    transition: right 0.5s ease;
   }
 
-  .footer .info .contacts {
-    padding-right: 0;
+  .grid-products .filter.show {
+    right: 0;
   }
 
-  .footer .footer-menu .info-first {
-    padding-left: 0;
+  .grid-products .filter img {
+    width: 25px;
+    height: 25px;
+    align-self: flex-end;
+    padding: 10px 10px 7px 0;
   }
 
-  .footer a, .footer p {
-    font-size: 12px;
+  .grid-products .filter img:hover {
+    cursor: pointer;
   }
 
-  .footer .adress {
-    margin-top: 10px;
+  .grid-products .filter > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 17px 50px;
   }
+
+  .grid-products .filter > div:first-of-type {
+    padding-top: 0px;
   }
+
+  .grid-products .filter > div:last-of-type {
+    margin-bottom: 18px;
+  }
+
+  .grid-products .filter > div::after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 2%;
+    height: 0.5px;
+    width: 96%;
+    background-color: var(--text-light);
+  }
+
+  .grid-products .filter > div:last-child::after {
+    display: none;
+  }
+
+  .grid-products .filter div > p {
+    font-size: 16.8px;
+    padding: 0 0 16px 0;
+  }
+
+  .grid-products .filter .price .range {
+    display: inline-flex;
+    padding-bottom: 16px;
+  }
+  
+  .grid-products .filter .price input {
+    width: 70px;
+    height: 20px;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    margin: 0 13px;
+  }
+
+  .grid-products .filter .price .range p {
+    padding: 0;
+    gap: 13px;
+    font-family: 'GothamPro';
+    font-weight: 400;
+    font-size: 16.8px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .grid-products .filter .price .button {
+    opacity: 1;
+    text-align: center;
+    font-family: 'GothamPro';
+    font-weight: 500;
+    font-size: 16.8px;
+    width: 100%; 
+    height: auto;
+    line-height: 250%;
+    background-color: var(--text-accent);
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+  }
+
+  .grid-products .filter .price .button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .grid-products .filter .color div:not(:last-of-type),
+  .grid-products .filter .length div:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  .grid-products .filter .color-picker,
+  .grid-products .filter .length-picker {
+    position: relative;
+    display: inline-flex;
+  }
+
+  .grid-products .filter .color-picker:hover,
+  .grid-products .filter .length-picker:hover {
+    cursor: pointer;
+  }
+
+  .grid-products .filter .color-picker:hover h3,
+  .grid-products .filter .length-picker:hover h3 {
+    font-weight: 500;
+  }
+
+  .length-picker::before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: 12px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: url("assets/images/галочка.png") no-repeat center center;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .length-picker.active::before {
+    opacity: 1;
+  }
+
+  .color-picker.active h3{
+    font-weight: 500;
+  }
+
+  .grid-products .filter .color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .grid-products .filter .length .length-square{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+  }
+
+
+/* АДАПТИВНА ВЕРСІЯ */
+
+@media (max-width: 575px) { 
+.grid-products li {
+  width: 48%;
+  padding-bottom: 5%;
+}
+
+.grid-products .cat-name-sort-filter {
+  padding: 10px 0;
+  margin-bottom: 10px;
+  flex-direction: column;
+}
+
+.grid-products .container {
+  overflow: visible;
+}
+
+.grid-products .cat-name {
+  font-size: 25px;
+  margin-bottom: 10px
+}
+
+.grid-products .sort-filter p {
+  padding-left: 12px;
+  font-size: 16.8px;
+}
+
+.grid-products .sort-filter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+}

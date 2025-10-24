@@ -1,0 +1,13 @@
+<?php 
+add_action('wp_enqueue_scripts', 'add_scripts_and_styles');
+function add_scripts_and_styles() {
+    wp_enqueue_style('style', get_stylesheet_uri());
+	wp_enqueue_style('swiper', get_template_directory_uri().'/assets/css/swiper-bundle.min.css');
+    wp_enqueue_script('main', get_template_directory_uri().'/assets/js/main.js', array(), null, true);
+    wp_enqueue_script('swiper', get_template_directory_uri().'/assets/js/swiper-bundle.min.js', array(), null, true);
+    wp_enqueue_script('mixitup', get_template_directory_uri().'/assets/js/mixitup.min.js', array(), null, true);
+    wp_enqueue_script('mixitup-multifilter', get_template_directory_uri().'/assets/js/mixitup-multifilter.min.js', array(), null, true);
+}
+
+
+?>

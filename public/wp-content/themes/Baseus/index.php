@@ -1,0 +1,270 @@
+<?php get_header(); ?>
+    <!-- ХЕДЕР -->
+     <div class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="categories-swiper">
+                    <ul class="categories-list swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="" class="category">
+                                <img src="assets/images/image 1.png" alt="">
+                                <h2>Павербанки</h2>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="" class="category">
+                                <img src="assets/images/image 2.png" alt="">
+                                <h2>Шнури</h2>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="" class="category">
+                                <img src="assets/images/image 4.png" alt="">
+                                <h2>Чохли</h2>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="" class="category">
+                                <img src="assets/images/image 5.png" alt="">
+                                <h2>Аксесуари</h2>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="" class="category">
+                                <img src="assets/images/image 1.png" alt="">
+                                <h2>Автотовари</h2>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="" class="category">
+                                <img src="assets/images/image 2.png" alt="">
+                                <h2>Всі категорії</h2>
+                            </a>
+                        </li class="swiper-slide">
+                    </ul>
+                </div>
+                <div class="promotions">
+                    <div class="promotions-swiper">
+                        <ul class="promo-list swiper-wrapper">
+                            <li class="promo swiper-slide">
+                                <div class="image">
+                                    <img src="assets/images/IMG_3589 1.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3 class="title">20 000 mAh, 20 W Швидка зарядка Зарядка ноутбука</h3>
+                                    <div class="price">
+                                        <h1 class="non-promo-price">2200</h1>
+                                        <h1 class="promo-price">1800</h1>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="" class="buy">Купити</a>
+                                        <a href="" class="catalog">В каталог</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="promo swiper-slide">
+                                <div class="image">
+                                    <img src="assets/images/IMG_3589 1.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3 class="title">20 000 mAh, 20 W Швидка зарядка Зарядка ноутбука</h3>
+                                    <div class="price">
+                                        <h1 class="non-promo-price">2200</h1>
+                                        <h1 class="promo-price">1800</h1>
+                                    </div>
+                                    <div class="buttons">
+                                        <a href="" class="buy">Купити</a>
+                                        <a href="" class="catalog">В каталог</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-- ХІТИ ПРОДАЖІВ -->
+     <div class="top-sales">
+        <div class="container">
+            <h2>Топ продажів</h2>
+            <div class="product-swiper">
+                <ul class="product-list swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="" class="product">
+                            <div class="image">
+                                <img class="image-main" src="assets/images/павер 20в 1.png" alt="">
+                                <img class="image-reserve" src="assets/images/IMG_3589 1.png" alt="">
+                            </div>
+                            <div class="info"> 
+                                <p class="product-name">Baseus Power Bank 20000mAh, 20W</p>
+                                <div class="rating">
+                                    <h2>5.0</h2>
+                                    <img src="assets/images/Star 1.png" alt="">
+                                </div>
+                                <div class="price">
+                                    <p class="non-promo-price">2200</p>
+                                    <h1 class="promo-price">1800</h1>
+                                </div>
+                                <img src="assets/images/додати в корзину.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="" class="product">
+                            <div class="image">
+                                <img class="image-main" src="assets/images/IMG_3917.png" alt="">
+                                <img class="image-reserve" src="assets/images/IMG_3979.jpg" alt="">
+                            </div>
+                            <div class="info"> 
+                                <p class="product-name">Baseus Blade Digital Display 20000 mAh PD 100W</p>
+                                <div class="rating">
+                                    <h2>4.9</h2>
+                                    <img src="assets/images/Star 1.png" alt="">
+                                </div>
+                                <div class="price">
+                                    <p class="non-promo-price"></p>
+                                    <h1 class="promo-price">3000</h1>
+                                </div>
+                                <img src="assets/images/додати в корзину.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="" class="product">
+                            <div class="image">
+                                <img class="image-main" src="assets/images/IMG_3929.png" alt="">
+                                <img class="image-reserve" src="assets/images/IMG_3971.png" alt="">
+                            </div>
+                            <div class="info"> 
+                                <p class="product-name">Baseus Magnetic Wireless Charging 20W на 10000mAh</p>
+                                <div class="rating">
+                                    <h2>4.5</h2>
+                                    <img src="assets/images/Star 1.png" alt="">
+                                </div>
+                                <div class="price">
+                                    <p class="non-promo-price">2000</p>
+                                    <h1 class="promo-price">1400</h1>
+                                </div>
+                                <img src="assets/images/додати в корзину.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="" class="product">
+                            <div class="image">
+                                <img class="image-main" src="assets/images/IMG_3926.jpg" alt="">
+                                <img class="image-reserve" src="assets/images/IMG_4031.png" alt="">
+                            </div>
+                            <div class="info"> 
+                                <p class="product-name">Baseus Display Fast Charging Data Cable C to C 100W</p>
+                                <div class="rating">
+                                    <h2>5.0</h2>
+                                    <img src="assets/images/Star 1.png" alt="">
+                                </div>
+                                <div class="price">
+                                    <p class="non-promo-price"></p>
+                                    <h1 class="promo-price">500</h1>
+                                </div>
+                                <img src="assets/images/додати в корзину.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+    <!-- НОВИНКИ -->
+     <div class="new-arrivals">
+        <div class="container">
+            <h2>Новинки</h2>
+            <div class="product-swiper">
+                <ul class="product-list swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="" class="product">
+                            <div class="image">
+                                <img class="image-main" src="assets/images/павер 20в 1.png" alt="">
+                                <img class="image-reserve" src="assets/images/IMG_3589 1.png" alt="">
+                            </div>
+                            <div class="info"> 
+                                <p class="product-name">Baseus Power Bank 20000mAh, 20W</p>
+                                <div class="rating">
+                                    <h2>5.0</h2>
+                                    <img src="assets/images/Star 1.png" alt="">
+                                </div>
+                                <div class="price">
+                                    <p class="non-promo-price">2200</p>
+                                    <h1 class="promo-price">1800</h1>
+                                </div>
+                                <img src="assets/images/додати в корзину.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="" class="product">
+                            <div class="image">
+                                <img class="image-main" src="assets/images/IMG_3917.png" alt="">
+                                <img class="image-reserve" src="assets/images/IMG_3979.jpg" alt="">
+                            </div>
+                            <div class="info"> 
+                                <p class="product-name">Baseus Blade Digital Display 20000 mAh PD 100W</p>
+                                <div class="rating">
+                                    <h2>4.9</h2>
+                                    <img src="assets/images/Star 1.png" alt="">
+                                </div>
+                                <div class="price">
+                                    <p class="non-promo-price"></p>
+                                    <h1 class="promo-price">3000</h1>
+                                </div>
+                                <img src="assets/images/додати в корзину.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="" class="product">
+                            <div class="image">
+                                <img class="image-main" src="assets/images/IMG_3929.png" alt="">
+                                <img class="image-reserve" src="assets/images/IMG_3971.png" alt="">
+                            </div>
+                            <div class="info"> 
+                                <p class="product-name">Baseus Magnetic Wireless Charging 20W на 10000mAh</p>
+                                <div class="rating">
+                                    <h2>4.5</h2>
+                                    <img src="assets/images/Star 1.png" alt="">
+                                </div>
+                                <div class="price">
+                                    <p class="non-promo-price">2000</p>
+                                    <h1 class="promo-price">1400</h1>
+                                </div>
+                                <img src="assets/images/додати в корзину.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="" class="product">
+                            <div class="image">
+                                <img class="image-main" src="assets/images/IMG_3926.jpg" alt="">
+                                <img class="image-reserve" src="assets/images/IMG_4031.png" alt="">
+                            </div>
+                            <div class="info"> 
+                                <p class="product-name"> Baseus Display Fast Charging Data Cable C to C 100W</p>
+                                <div class="rating">
+                                    <h2>5.0</h2>
+                                    <img src="assets/images/Star 1.png" alt="">
+                                </div>
+                                <div class="price">
+                                    <p class="non-promo-price"></p>
+                                    <h1 class="promo-price">500</h1>
+                                </div>
+                                <img src="assets/images/додати в корзину.png" alt="">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+     </div>
+<?php get_footer(); ?>

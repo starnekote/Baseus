@@ -1,3 +1,6 @@
+<!-- 
+ Template Name: Сторінка товару
+ -->
 <?php get_header(); ?>
     <!-- СТОРІНКА ТОВАРУ -->
      <div class="product-page">

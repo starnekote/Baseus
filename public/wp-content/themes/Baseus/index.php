@@ -1,3 +1,6 @@
+<!-- 
+ Template Name: Головна сторінка
+ -->
 <?php get_header(); ?>
     <!-- ХЕДЕР -->
      <div class="header">
@@ -7,38 +10,38 @@
                     <ul class="categories-list swiper-wrapper">
                         <li class="swiper-slide">
                             <a href="" class="category">
-                                <img src="assets/images/image 1.png" alt="">
-                                <h2>Павербанки</h2>
+                                <img src="<?php echo wp_get_attachment_url(SCF::get_term_meta(3, 'category', 'category_img')); ?>" alt="">
+                                <h2><?php echo get_category(3, ARRAY_A)['name']; ?></h2>
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="" class="category">
-                                <img src="assets/images/image 2.png" alt="">
-                                <h2>Шнури</h2>
+                                <img src="<?php echo wp_get_attachment_url(SCF::get_term_meta(5, 'category', 'category_img')); ?>" alt="">
+                                <h2><?php echo get_category(5, ARRAY_A)['name']; ?></h2>
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="" class="category">
-                                <img src="assets/images/image 4.png" alt="">
-                                <h2>Чохли</h2>
+                                <img src="<?php echo wp_get_attachment_url(SCF::get_term_meta(7, 'category', 'category_img')); ?>" alt="">
+                                <h2><?php echo get_category(7, ARRAY_A)['name']; ?></h2>
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="" class="category">
-                                <img src="assets/images/image 5.png" alt="">
-                                <h2>Аксесуари</h2>
+                                <img src="<?php echo wp_get_attachment_url(SCF::get_term_meta(4, 'category', 'category_img')); ?>" alt="">
+                                <h2><?php echo get_category(4, ARRAY_A)['name']; ?></h2>
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="" class="category">
-                                <img src="assets/images/image 1.png" alt="">
-                                <h2>Автотовари</h2>
+                                <img src="<?php echo wp_get_attachment_url(SCF::get_term_meta(6, 'category', 'category_img')); ?>" alt="">
+                                <h2><?php echo get_category(6, ARRAY_A)['name']; ?></h2>
                             </a>
                         </li>
                         <li class="swiper-slide">
                             <a href="" class="category">
-                                <img src="assets/images/image 2.png" alt="">
-                                <h2>Всі категорії</h2>
+                                <img src="<?php echo wp_get_attachment_url(SCF::get_term_meta(2, 'category', 'category_img')); ?>" alt="">
+                                <h2><?php echo get_category(2, ARRAY_A)['name']; ?></h2>
                             </a>
                         </li class="swiper-slide">
                     </ul>
@@ -46,38 +49,25 @@
                 <div class="promotions">
                     <div class="promotions-swiper">
                         <ul class="promo-list swiper-wrapper">
-                            <li class="promo swiper-slide">
-                                <div class="image">
-                                    <img src="assets/images/IMG_3589 1.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <h3 class="title">20 000 mAh, 20 W Швидка зарядка Зарядка ноутбука</h3>
-                                    <div class="price">
-                                        <h1 class="non-promo-price">2200</h1>
-                                        <h1 class="promo-price">1800</h1>
-                                    </div>
-                                    <div class="buttons">
-                                        <a href="" class="buy">Купити</a>
-                                        <a href="" class="catalog">В каталог</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="promo swiper-slide">
-                                <div class="image">
-                                    <img src="assets/images/IMG_3589 1.png" alt="">
-                                </div>
-                                <div class="text">
-                                    <h3 class="title">20 000 mAh, 20 W Швидка зарядка Зарядка ноутбука</h3>
-                                    <div class="price">
-                                        <h1 class="non-promo-price">2200</h1>
-                                        <h1 class="promo-price">1800</h1>
-                                    </div>
-                                    <div class="buttons">
-                                        <a href="" class="buy">Купити</a>
-                                        <a href="" class="catalog">В каталог</a>
-                                    </div>
-                                </div>
-                            </li>
+                            <?php $loop = SCF::get('promo', 7);
+                                foreach($loop as $row){?>
+                                    <li class="promo swiper-slide">
+                                        <div class="image">
+                                            <img src="<?php echo wp_get_attachment_url($row['promo_img'] )?>" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <h3 class="title"><?php echo $row['promo_text']?></h3>
+                                            <div class="price">
+                                                <h1 class="non-promo-price"><?php echo $row['non_promo_price']?></h1>
+                                                <h1 class="promo-price"><?php echo $row['promo_price']?></h1>
+                                            </div>
+                                            <div class="buttons">
+                                                <a href="" class="buy"><?php echo $row['promo_btn_first']?></a>
+                                                <a href="" class="catalog"><?php echo $row['promo_btn_second']?></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                            <?php } ?>
                         </ul>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-next"></div>

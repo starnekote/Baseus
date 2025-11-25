@@ -243,7 +243,7 @@ button {
   width: 100% !important;
 }
 
-.header .category {
+.header a {
   width: 180px;
   height: 134px;
   margin-bottom: 28px;
@@ -254,13 +254,16 @@ button {
   justify-content: space-evenly;
   align-items: center;
   transition: opacity 0.5s ease;
+  font-family: 'GothamPro';
+  font-weight: 700;
+  font-size: 1.5em;
 }
 
-.category:hover {
+.header a:hover {
   opacity: 0.5;
 }
 
-.category img{
+.header a img{
   filter: invert(1);
 }
 
@@ -403,23 +406,23 @@ button {
   object-fit: cover;
 }
 
-.product .image-main {
+.product .image img:first-of-type {
   position: absolute;
   opacity: 1;
   transition: opacity 0.5s ease;
 }
 
-.product .image-reserve {
+.product .image img:last-of-type {
   position: absolute;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-.product:hover .image-reserve {
+.product:hover .image img:last-of-type {
   opacity: 1;
 }
 
-.product:hover .image-main {
+.product:hover .image img:first-of-type {
   opacity: 0;
 }
 
@@ -620,19 +623,19 @@ button {
     height: 100%;
   }
 
-  .header .category {
+  .header a {
     width: 100%;
     height: auto;
     padding: 10% 0;
     margin-bottom: 0;
   }
 
-  .header .category img {
+  .header a img {
     width: 50%;
     height: auto;
   }
 
-  .header .category h2 {
+  .header a {
     font-size: 14px;
   }
 
@@ -826,8 +829,41 @@ button {
   display: none;
 }
 
+/* ПАГІНАЦІЯ */
+.pagination {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination > h2 {
+  display: none;
+}
+
+.pagination .nav-links .page-numbers {
+  font-family: 'GothamPro';
+  font-weight: 400;
+  font-size: 14px;
+  padding: 4px 6px;
+  border: 0.5px rgba(0, 0, 0, 0.5) solid;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+.pagination .nav-links .prev,
+.pagination .nav-links .next {
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 16.8px;
+}
+
 /* АДАПТИВНА ВЕРСІЯ */
 @media (max-width: 575px) { 
+
+.pagination {
+  margin: 10px 0;
+}
 
 .categories {
   padding: 20px 0;

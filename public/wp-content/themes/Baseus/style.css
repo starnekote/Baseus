@@ -1616,3 +1616,50 @@ button {
   font-size: 26px;
   color: #000000;
 }
+
+.product-page .info .col-2 .woocommerce-Reviews-title {
+  font-family: 'GothamPro';
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.product-page .info .col-2 ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.product-page .info .col-2 .comment-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.product-page .info .col-2 .woocommerce-review__author,
+.product-page .info .col-2 .my-rating {
+  position: relative;
+  font-size: 16px;
+  color: #FF0000;
+  margin: 0 13px 10px 0;
+}
+
+.product-page .info .col-2 .review .my-rating::after {
+  content: "";
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("assets/images/Star\ 1.png") no-repeat center center;
+  background-size: contain;
+}
+
+.product-page .info .col-2 .review .description {
+  flex-basis: 100%;
+}
+
+.product-page .info .col-2 .review .description p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}

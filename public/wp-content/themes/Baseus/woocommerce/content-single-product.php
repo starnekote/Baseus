@@ -84,6 +84,7 @@ if ($stock) {
                         </div>
                     </div>
                     <div class="col-2">
+						<?php comments_template(); ?>
                         <p>Відгуки</p>
                         <div class="review">
                             <h2 class="username">Олексій</h2><h2 class="rating">5.0</h2>

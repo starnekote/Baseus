@@ -121,4 +121,22 @@ function change_uah_symbol( $symbol, $currency ) {
     }
     return $symbol;
 }
+
+
+add_filter( 'woocommerce_product_get_rating_html', 'custom_wc_rating_html', 10, 3 );
+
+function custom_wc_rating_html( $html, $rating, $count ) {
+
+    // Якщо рейтингу немає — нічого не виводимо
+    if ( $rating <= 0 ) {
+        return '';
+    }
+
+    // 🔥 Твій кастомний HTML
+    $new_html  = '<div class="my-rating">';
+    $new_html .= $rating;
+    $new_html .= '</div>';
+
+    return $new_html;
+}
 ?>

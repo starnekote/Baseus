@@ -20,6 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$delimiter = '&nbsp;&nbsp;>&nbsp;&nbsp;';
+
 if ( ! empty( $breadcrumb ) ) {
 
 	echo $wrap_before;

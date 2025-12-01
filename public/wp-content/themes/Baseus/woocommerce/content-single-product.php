@@ -25,23 +25,79 @@ global $product;
  * @hooked woocommerce_output_all_notices - 10
  */
 do_action( 'woocommerce_before_single_product' );
-
-if ( post_password_required() ) {
-	echo get_the_password_form(); // WPCS: XSS ok.
-	return;
-}
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
-	<?php
-	/**
-	 * Hook: woocommerce_before_single_product_summary.
-	 *
-	 * @hooked woocommerce_show_product_sale_flash - 10
-	 * @hooked woocommerce_show_product_images - 20
-	 */
-	do_action( 'woocommerce_before_single_product_summary' );
-	?>
+<?php 
+// Додає айді головного зобоаження в масив галереї
+$product_img_id = $product->get_image_id();
+$product_gallery_ids = $product->get_gallery_image_ids();
+array_unshift($product_gallery_ids, (int) $product_img_id);
+
+$stock = $product->is_in_stock();
+if ($stock) {
+	$stock_res = 'В наявності';
+} else {
+	$stock_res = 'Немає в наявності';
+}
+?>
+
+		<div class="product-card">
+			<div class="galery">
+				<div class="product-gallery-main-swiper">
+					<ul class="swiper-wrapper">
+						<?php foreach ($product_gallery_ids as $product_gallery_id): ?>
+							<li class="swiper-slide">
+								<img src="<?php echo wp_get_attachment_url($product_gallery_id); ?>" alt="">
+							</li>
+						<?php endforeach; ?>
+					</ul>
+				</div>
+				<div class="product-gallery-thumb-swiper">
+					<ul class="swiper-wrapper">
+						<?php foreach ($product_gallery_ids as $product_gallery_id): ?>
+							<li class="swiper-slide">
+								<img src="<?php echo wp_get_attachment_url($product_gallery_id); ?>" alt="">
+							</li>
+						<?php endforeach; ?>
+					</ul>
+				</div>
+	                </div>
+                <div class="info">
+                    <div class="product-name">
+                        <?php woocommerce_template_single_title(); ?>
+                        <p><?php echo $stock_res ?></p>
+                    </div>
+                    <div class="col-1">
+                        <div class="product-colors">
+                            <p>Колір</p>
+                            <div class="color-row">
+                                <div class="color-circle" style="background-color: #000;"></div>
+                                <div class="color-circle" style="background-color: var('--bg-white');"></div>
+                            </div>
+                        </div>
+							<?php woocommerce_product_additional_information_tab(); ?>
+							<?php woocommerce_template_single_price(); ?>
+                        <div class="buttons">
+                            <button class="buy">Купити</button>
+                            <button class="chart">В кошик <img src="assets/images/додати в корзину (1).png" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <p>Відгуки</p>
+                        <div class="review">
+                            <h2 class="username">Олексій</h2><h2 class="rating">5.0</h2>
+                            <p class="text">Дякую за павербанк! Швидко заряджає, зручно, що можна заряджати кілька пристроїв разом</p>
+                        </div>
+                        <div class="review">
+                            <h2 class="username">Наталія</h2><h2 class="rating">4.5</h2>
+                            <p class="text">Павер класний, швидко заряджає, вистачає на кілька разів Окреме дякую, що все пояснили, підібрали, швидко оформили і відправили замовлення Рекомендую ваш магазин</p>
+                        </div>
+                        <a href=""><p class="review-all">Всі відгуки</p></a>
+                    </div>
+                </div>
+            </div>
+
 
 	<div class="summary entry-summary">
 		<?php

@@ -112,4 +112,13 @@ function get_average_product_rating() {
     return round($sum / $count, 1);
 }
 require_once get_template_directory().'/incs/woocommerce-hooks.php';
+
+add_filter( 'woocommerce_currency_symbol', 'change_uah_symbol', 10, 2 );
+
+function change_uah_symbol( $symbol, $currency ) {
+    if ( $currency === 'UAH' ) {
+        $symbol = 'грн'; // сюди вставляєш будь-який символ
+    }
+    return $symbol;
+}
 ?>
